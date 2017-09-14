@@ -5,10 +5,13 @@ import { PostComponent } from './post/index';
 import { AuthGuard } from './_guards/index';
 import {Transition} from "@uirouter/angular";
 
-export const homeState = { name: 'home', url: '/',  component: HomeComponent }; 
+export const appState = [
+{ name: 'home', url: '/home',  component: HomeComponent ,canActivate: [AuthGuard]}, 
 
-export const postState = { name: 'post', url: '/post',  component: PostComponent };
+{ name: 'post', url: '/post',  component: PostComponent ,canActivate: [AuthGuard]},
 
-export const loginState = { name: 'login', url: '/login',  component: LoginComponent }; 
+ { name: 'login', url: '/login',  component: LoginComponent },
 
-export const registerState = { name: 'register', url: '/register',  component: RegisterComponent };
+ { name: 'register', url: '/register',  component: RegisterComponent }
+
+];

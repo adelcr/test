@@ -1,10 +1,9 @@
-import {UIRouter} from "@uirouter/angular";
-import {Injector, Injectable} from "@angular/core";
-import {homeState, postState, loginState, registerState} from "./states.js";
+import {UIRouter} from  "@uirouter/angular";
+
 
 
 /** UIRouter Config  */
-export function uiRouterConfigFn(router: UIRouter, injector: Injector) {
+export function uiRouterConfigFn(router: UIRouter) {
 
   
   // If no URL matches, go to the `home` state by default
