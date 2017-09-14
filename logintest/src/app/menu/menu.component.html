@@ -1,0 +1,14 @@
+
+<md-toolbar color="primary">
+    <button md-button routerLink="/">
+    	<md-icon>home</md-icon> Home
+    </button>
+    <!-- This fills the remaining space of the current row -->
+    <span class="fill-remaining-space"></span>
+    <div fxLayout="row" fxShow="false" fxShow.gt-sm>
+        <button md-button [routerLink]="['/post']" >
+        	<md-icon>info outline</md-icon>Posts
+        </button>
+    </div>
+
+</md-toolbar>
